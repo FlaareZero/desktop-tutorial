@@ -5,27 +5,23 @@
 
 int main(){
     int numero_tabellina;
-
-    int i,n;
+    int i=0,n;
 
     printf("Inserisci il numero di cui devo riportare la tabellina: ");
     scanf("%d",&numero_tabellina);
 
-    if(i<10){
+//non hai settato i...
+    if(numero_tabellina==0){
         printf("La tabellina richiesta nn è disponibile...sorry!!!!");
-
-        return 0;
+	return 1;
     }
 
-    while (n<10){
+    while (i<10){
         printf("Ti mostrerò la tabellina del numero che mi hai fornito...");
+	printf("%d",numero_tabellina*i);
 
-        printf("%d",numero_tabellina*i);
-
-        break;
+	++i;
     }
 
-
-
-
+return 0;
 }
