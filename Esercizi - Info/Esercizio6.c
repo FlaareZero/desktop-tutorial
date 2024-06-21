@@ -1,31 +1,32 @@
-/*Creare un applicazione che mostri la tabellina di un numero scelto dall'utente, dallo 0 fino al 10*/
-
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(){
-    int numero_tabellina;
+    /*Iniziallizazione Variabili*/
+    	int i;
+    	int n;
+    //n=1;
+// il conteggio deve essere scelto in base alla richiesta dell'utente.
 
-    int i,n;
+    	/*Presa del parametro di conteggio*/
+   	 printf("Inserisci il numero da cui deve partire il conteggio:");
+	 scanf("%d",&i);
+	// setto il valore di n come i, in modo da avere un punto di inizio coerente.
+	if(i<0 || i=0){
+		printf("Non posso partire da un numero uguale a zero.");
+		return 1;
+	} else {
+		n=i;
+	}
+    /*Ciclo di conteggio*/
 
-    printf("Inserisci il numero di cui devo riportare la tabellina: ");
-    scanf("%d",&numero_tabellina);
+    	while (i > 0){
+        	printf("%d", n);
+        	// è un conto alla rovescia, non un conteggio
+		// quindi, al posto di n++, sarebbe meglio usare:
+		n--;
+	}
 
-    if(i<10){
-        printf("La tabellina richiesta nn è disponibile...sorry!!!!");
-
-        return 0;
-    }
-
-    while (n<10){
-        printf("Ti mostrerò la tabellina del numero che mi hai fornito...");
-
-        printf("%d",numero_tabellina*i);
-
-        break;
-    }
-
-
-
-
+//return 0 in questo caso non serve.
+	return 0 
+//qua ha molto più senso :)
 }
