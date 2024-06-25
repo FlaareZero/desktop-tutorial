@@ -4,6 +4,7 @@ Il programma confronterà il numero inserito dall'utente con il numero segreto e
 
 Hai a disposizione 40 minuti. Suggerimenti: potresti usare una variabile numeroSegreto che sfrutti rand() in modo da generare il tuo numero casuale!
 Es.   numeroSegreto = rand() % (max - min + 1) + min;*/
+*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -23,12 +24,12 @@ int main(){
     	scanf("%d", &numeroUtente);
 
     	// Validazione dell'input (controllo se il numero è all'interno dell'intervallo)
-    	if (numeroUtente < min || numeroUtente > max){
+    	if (numeroUtente == numeroSegreto){
         	printf("Il numero selezionato è corretto...il numero indovinato è %d", numeroUtente);
+		    return 0;
     	} else {
         	printf("Il numero selezionato, non è corretto...c'è bisogno di continuare con i tentativi...");
     	}
-        	return 0;
-
+      return 1;
     }
 }
