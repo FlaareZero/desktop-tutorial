@@ -51,7 +51,9 @@ int main(){
         printf("Non hai superato la soglia, lo sconto non si può applicare....vaffanculo");
     }
 
-    /*Quarto Punto*/
+    /*Quarto Punto - Quinto Punto*/
+
+    //Da notare, che qui...sono racchiusi sia il punto 4 che il punto 5, poichè sono ridotti, per pulizia del codice.
 
     printf("Si possiede una carta fedeltà? ");
     scanf("%c", &risposta_fedelta);
