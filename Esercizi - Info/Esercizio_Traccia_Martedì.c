@@ -9,25 +9,26 @@ Es.   numeroSegreto = rand() % (max - min + 1) + min;*/
 #include<stdlib.h>
 
 int main(){
-    int n;
+    int n, max=10, min=1;
     int numeroUtente;
     int tentativi;
 
-    n=0;
+    tentativi=0;
+    int numeroSegreto = rand() % (max - min + 1) + min;
 
     while (numeroUtente != numeroSegreto) {
-    tentativi++;
+    	tentativi++;
 
-    printf("\nTentativo %d: Inserisci un numero: ", tentativi);
-    scanf("%d", &numeroUtente);
+    	printf("\nTentativo %d: Inserisci un numero: ", tentativi);
+    	scanf("%d", &numeroUtente);
 
-    // Validazione dell'input (controllo se il numero è all'interno dell'intervallo)
-    if (numeroUtente < min || numeroUtente > max){
-        printf("Il numero selezionato è corretto...il numero indovinato è %d", numeroUtente);
-    } else {
-        printf("Il numero selezionato, non è corretto...c'è bisogno di continuare con i tentativi...");
-    }
-        return 0;
+    	// Validazione dell'input (controllo se il numero è all'interno dell'intervallo)
+    	if (numeroUtente < min || numeroUtente > max){
+        	printf("Il numero selezionato è corretto...il numero indovinato è %d", numeroUtente);
+    	} else {
+        	printf("Il numero selezionato, non è corretto...c'è bisogno di continuare con i tentativi...");
+    	}
+        	return 0;
 
     }
 }
