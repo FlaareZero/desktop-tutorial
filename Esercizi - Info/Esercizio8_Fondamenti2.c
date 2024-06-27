@@ -60,7 +60,7 @@ int main() {
                     printf("Scelta non valida, riprovare...\n");
                 }
                 break;
-
+                //----------------------------------------------------------------
             case 2: //Primi Piatti
                 printf("Scegli tra i primi piatti:\n");
                 //------------------------------------
@@ -72,7 +72,22 @@ int main() {
                 //---------------------------------------
                 printf("Scegli un'opzione (1-5): ");
                 scanf("%d", &sceltaSottoMenu);
-
+                //----------------------------------------
+                if(sceltaSottoMenu == 1){
+                    printf("Hai scelto Lasagne.\n");
+                } else if (sceltaSottoMenu == 2){
+                    printf("Hai scelto Spaghetti alla Carbonara.\n");
+                } else if (sceltaSottoMenu == 3){
+                    printf("Hai scelto Gricia.\n");
+                } else if (sceltaSottoMenu == 4) {
+                    printf("Hai scelto Amatriciana.\n");
+                } else if (sceltaSottoMenu == 5){
+                    printf("Hai scelto Spaghetti Cacio e Pepe");
+                } else {
+                    printf("Scelta non valida, riprovare...\n");
+                }
+                break;
+                //-----------------------------------------------------
             case 3: //Secondi Piatti
                 printf("Scegli tra i secondi piatti:\n");
                 //------------------------------------
@@ -86,7 +101,26 @@ int main() {
                 //---------------------------------------
                 printf("Scegli un'opzione (1-5): ");
                 scanf("%d", &sceltaSottoMenu);
-
+                //---------------------------------------------
+                if(sceltaSottoMenu == 1){
+                    printf("Hai scelto Parmigiana di Melanzane.\n");
+                } else if (sceltaSottoMenu == 2){
+                    printf("Hai scelto Polpette al sugo.\n");
+                } else if (sceltaSottoMenu == 3){
+                    printf("Hai scelto Polpettine di Tonno e Ricotta.\n");
+                } else if (sceltaSottoMenu == 4) {
+                    printf("Hai scelto Pollo al Curry.\n");
+                } else if (sceltaSottoMenu == 5){
+                    printf("Hai scelto Saltimbocca alla Romana.\n");
+                } else if (sceltaSottoMenu == 6){
+                    printf("Hai scelto Zucchine Gratinate.\n");
+                } else if (sceltaSottoMenu == 7){
+                    printf("Hai scelto Polpette di Spinaci e Ricotta.\n");
+                } else {
+                    printf("Scelta non valida, riprovare...\n");
+                }
+                break;
+                /*--------------------------------------------------------*/
             case 4: //Contorni
                 printf("Scegli tra i Contorni:\n");
                 //------------------------------------
@@ -95,12 +129,31 @@ int main() {
                 printf("3. Peperonata\n");
                 printf("4. Insalata di Patate\n");
                 printf("5. Caponata\n");
-                printf("5. Gateau di Patate\n");
-                printf("5. Patate al forno\n");
+                printf("6. Gateau di Patate\n");
+                printf("7. Patate al forno\n");
                 //---------------------------------------
                 printf("Scegli un'opzione (1-5): ");
                 scanf("%d", &sceltaSottoMenu);
-
+                //---------------------------------------------
+                if(sceltaSottoMenu == 1){
+                    printf("Hai scelto Cavolfiori Gratinati.\n");
+                } else if (sceltaSottoMenu == 2){
+                    printf("Hai scelto Insalata di Cavolfiore.\n");
+                } else if (sceltaSottoMenu == 3){
+                    printf("Hai scelto Peperonata.\n");
+                } else if (sceltaSottoMenu == 4) {
+                    printf("Hai scelto Insalata di Patate.\n");
+                } else if (sceltaSottoMenu == 5){
+                    printf("Hai scelto Caponata.\n");
+                } else if (sceltaSottoMenu == 6){
+                    printf("Hai scelto Gateau di Patate.\n");
+                } else if (sceltaSottoMenu == 7){
+                    printf("Hai scelto Patate al forno.\n");
+                } else{
+                    printf("Scelta non valida, riprovare...\n");
+                }
+                break;
+                /*--------------------------------------------------------*/
             case 5: //Dolci
                 printf("Scegli tra i dolci:\n");
                 //------------------------------------
@@ -109,11 +162,31 @@ int main() {
                 printf("3. Torta di Mele\n");
                 printf("4. Crema Pasticceria\n");
                 printf("5. Cheesecake al limone\n");
-                printf("5. Brownies\n");
-                printf("5. Cookies\n");
+                printf("6. Brownies\n");
+                printf("7. Cookies\n");
                 //---------------------------------------
                 printf("Scegli un'opzione (1-5): ");
                 scanf("%d", &sceltaSottoMenu);
+                //---------------------------------------------
+                if(sceltaSottoMenu == 1){
+                    printf("Hai scelto Tiramisu.\n");
+                } else if (sceltaSottoMenu == 2){
+                    printf("Hai scelto Torta Sacher.\n");
+                } else if (sceltaSottoMenu == 3){
+                    printf("Hai scelto Torta di Mele.\n");
+                } else if (sceltaSottoMenu == 4) {
+                    printf("Hai scelto Crema Pasticceria.\n");
+                } else if (sceltaSottoMenu == 5){
+                    printf("Hai scelto Cheesecake al limone.\n");
+                } else if (sceltaSottoMenu == 6){
+                    printf("Hai scelto Brownies.\n");
+                } else if (sceltaSottoMenu == 7){
+                    printf("Hai scelto Cookies.\n");
+                } else{
+                    printf("Scelta non valida, riprovare...\n");
+                }
+                break;
+                /*--------------------------------------------------------*/
 
             case 6: //Bevande
                 printf("Scegli tra le bevande:\n");
@@ -125,6 +198,20 @@ int main() {
                 //---------------------------------------
                 printf("Scegli un'opzione (1-4): ");
                 scanf("%d", &sceltaSottoMenu);
+                //---------------------------------------------
+                if(sceltaSottoMenu == 1){
+                    printf("Hai scelto Coca-Cola.\n");
+                } else if (sceltaSottoMenu == 2){
+                    printf("Hai scelto Coca-Cola ZERO.\n");
+                } else if (sceltaSottoMenu == 3){
+                    printf("Hai scelto Acqua Naturale.\n");
+                } else if (sceltaSottoMenu == 4) {
+                    printf("Hai scelto Acqua Frizzante.\n");
+                } else{
+                    printf("Scelta non valida, riprovare...\n");
+                }
+                break;
+                /*--------------------------------------------------------*/
         }   
     }
 }
