@@ -39,7 +39,12 @@ int main() {
         printf("7. Esci\n");
         printf("Scegli un'opzione (1-7): ");
         scanf("%d", &sceltaPrincipale);
-
+        
+        if(sceltaPrincipale <= 1 || sceltaPrincipale >= 7) {
+            printf("Errore, riprovare.");
+            return 0;
+        }
+        
         switch(sceltaPrincipale){
             case 1: //Antipasti
                 printf("Scegli un antipasto:\n");
@@ -212,6 +217,6 @@ int main() {
                 }
                 break;
                 /*--------------------------------------------------------*/
-        }   
-    }
-}
+            }   
+        } while(sceltaPrincipale!=0);  
+    } 
