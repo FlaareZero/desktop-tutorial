@@ -10,25 +10,24 @@ int main(){
 
     printf("Inserisci il numero di cui devo fare il fattoriale:");
     scanf("%d", &numero);
-
+    
+    
     /*Inizialliziamo il fattoriale*/
 
-    int fattoriale=0;
+    int fattoriale=1;
 
     if(numero > 0){
 
-        int i=1;
-        while(i<numero){
+        int i=numero;
+        while(i!=0){
             
             fattoriale = fattoriale*i;
 
-            i = i+1;
+            i = i-1;
         }
     }
 
     printf("Fattoriale: %d \n", fattoriale);
 
     return 0;
-
-    
 }
