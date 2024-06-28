@@ -21,8 +21,8 @@ int main(){
     int array[N];
 
     //Permetti di inserire gli elementi dentro l'array...
-    printf("Inserisci %d valori da cercare... -->\n",N);
     for(int i=0; i<N; i++){
+        printf("Inserisci %d valori da cercare... -->\n",N);
         printf("Valore %d: ",i+1);
         scanf("%d", &array[i]);
     }
