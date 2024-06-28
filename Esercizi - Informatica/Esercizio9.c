@@ -1,7 +1,7 @@
 /*Scrivere un programma C che legge un array di interi da tastiera e poi lo stampa in ordine invertito...*/
 
 #include <stdio.h>
-#define array [6]
+#define array 6
 
 int main(){
     int n;
