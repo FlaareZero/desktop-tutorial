@@ -17,11 +17,33 @@ Il programma deve svolgere le seguenti operazioni:
 int main(){
     //------------------------//
     //***Dichiarazione Variabili Intere richieste dalla traccia***//
-    int numeri_scolastici_media;
+    int num_voti;
     //------------------------//
     
     printf("Quanti voti vuoi inserire? -->");
-    scanf("%d", &numeri_scolastici_media);
+    scanf("%d", &num_voti);
 
+    //--------------Ricordiamo che i voti devono essere sempre positivi, per cui ci implementiamo un "se"----------------//
 
+    if(num_voti <= 0){
+        printf("Ricorda che i voti sono unicamente positivi...il voto inserito non è valido...");
+
+        return 1;
+    }
+
+    //***Da qui comincia il ciclo della media dei voti...***
+
+    float voti[num_voti];
+    float somma = 0.0;
+
+    for (int i = 0; i < num_voti; i++) {
+        printf("Inserisci il voto %d: ", i + 1);
+        scanf("%f", &voti[i]);
+        somma += voti[i];
+    }
+
+    float media = somma / num_voti;
+    printf("La media dei voti e': %.2f\n", media);
+
+    return 0;
 }
