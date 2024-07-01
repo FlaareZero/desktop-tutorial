@@ -22,6 +22,8 @@ int main(){
     int numero_inserito_calculator_2;
     int scelta_menu_principale;
     int scelta_menu_secondario;
+
+    int somma, sottrazione, divisione, moltiplicazione;
     //------------------------//
 
     printf("Dimmi il 1 numero che vuoi che inserisca nella calcolatrice");
@@ -66,7 +68,12 @@ int main(){
                 }
                 break;
         }
+            //Svolgimento Operazioni Richieste nella traccia
+            somma = numero_inserito_calculator_1 + numero_inserito_calculator_2;
+            sottrazione = numero_inserito_calculator_1 - numero_inserito_calculator_2;
+            moltiplicazione = numero_inserito_calculator_1 * numero_inserito_calculator_2;
+            divisione = numero_inserito_calculator_1 / numero_inserito_calculator_2;
         }
-        while (scelta_menu_principale != 0);    
+        while (scelta_menu_principale != 0);
         
         }
