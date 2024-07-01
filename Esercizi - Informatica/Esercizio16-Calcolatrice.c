@@ -33,13 +33,13 @@ int main(){
     do {
         //Stampa menu operazioni principali
         printf("Menù Operazioni Principali:\n");
-        printf("1. Addizione");
-        printf("2. Sottrazione");
-        printf("3. Moltiplicazione");
-        printf("4. Divisione");
+        printf("1. Addizione\n");
+        printf("2. Sottrazione\n");
+        printf("3. Moltiplicazione\n");
+        printf("4. Divisione\n");
         scanf("%d", &scelta_menu_principale);
 
-        if(scelta_menu_principale <=1 || scelta_menu_principale >=4){
+        if(scelta_menu_principale <1 || scelta_menu_principale >4){
             printf("Errore! Riprovare! Si è premuti il numero sbagliato o non funzionante!");
             return 0;
         }
