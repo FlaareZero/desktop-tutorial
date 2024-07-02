@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+#define MAX_ATHLETES 100
+#define MAX_SCORES 5
+
+typedef struct {
+    int id;
+    float scores[MAX_SCORES];
+    float highest_score;
+    float lowest_score;
+} Athlete;
+
+int main() {
+    int n;
+    printf("Inserisci il numero di sequenze di numeri: ");
+    scanf("%d", &n);
+
+    Athlete athletes[MAX_ATHLETES];
+    int qualified_count = 0;
+    int judges_with_10 = 0;
+
+    // Leggi e elabora le sequenze di numeri
+    for (int i = 0; i < n; i++) {
+        printf("Sequenza %d:\n", i + 1);
+        printf("Inserisci l'identificativo dell'atleta: ");
+        scanf("%d", &athletes[i].id);
+
+        // Inizializza il punteggio più alto e più basso al primo punteggio della sequenza
+        printf("Inserisci i 5 punteggi attribuiti dai giudici:\n");
+        scanf("%f %f %f %f %f", &athletes[i].scores[0], &athletes[i].scores[1], &athletes[i].scores[2], &athletes[i].scores[3], &athletes[i].scores[4]);
+        athletes[i].highest_score = athletes[i].scores[0];
+        athletes[i].lowest_score = athletes[i].scores[0];
+
+        // Trova il punteggio più alto e più basso
+        for (int j = 1; j < MAX_SCORES; j++) {
+            if (athletes[i].scores[j] > athletes[i].highest_score)
+                athletes[i].highest_score = athletes[i].scores[j];
+            if (athletes[i].scores[j] < athletes[i].lowest_score)
+                athletes[i].lowest_score = athletes[i].scores[j];
+        }
+
+        // Calcola la media dei punteggi dell'atleta
+        float average_score = 0;
+        for (int j = 0; j < MAX_SCORES; j++) {
+            average_score += athletes[i].scores[j];
+        }
+        average_score /= MAX_SCORES;
+
+        // Verifica se l'atleta si qualifica con una media di punteggio superiore a 8
+        if (average_score > 8)
+            qualified_count++;
+
+        // Verifica quanti giudici hanno assegnato il punteggio di 10
+        for (int j = 0; j < MAX_SCORES; j++) {
+            if (athletes[i].scores[j] == 10) {
+                judges_with_10++;
+                break;
+            }
+        }
+    }
+
+    // Stampa la matrice dei risultati
+    printf("\nMatrice dei risultati:\n");
+    printf("ID Atleta  Valutazione  Punteggio Massimo  Punteggio Minimo\n");
+    for (int i = 0; i < n; i++) {
+        printf("%9d  ", athletes[i].id);
+        printf("%11.2f  ", (athletes[i].scores[0] + athletes[i].scores[1] + athletes[i].scores[2] + athletes[i].scores[3] + athletes[i].scores[4]) / 5);
+        printf("%17.2f  ", athletes[i].highest_score);
+        printf("%17.2f\n", athletes[i].lowest_score);
+    }
+
+    // Stampa gli atleti qualificati
+    printf("\nAtleti Qualificati:\n");
+    for (int i = 0; i < n; i++) {
+        float average_score = (athletes[i].scores[0] + athletes[i].scores[1] + athletes[i].scores[2] + athletes[i].scores[3] + athletes[i].scores[4]) / 5;
+        if (average_score > 8)
+            printf("%d\n", athletes[i].id);
+    }
+
+    // Stampa il numero di giudici che hanno assegnato il punteggio di 10
+    printf("\nNumero di giudici con punteggio 10: %d\n", judges_with_10);
+
+    return 0;
+}
