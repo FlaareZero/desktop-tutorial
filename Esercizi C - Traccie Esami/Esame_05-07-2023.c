@@ -16,7 +16,7 @@ int main () {
     int i,n,m,nc,id;
     float sommaTotaleMance = 0;
     float cons;
-    float somma,sommatot,max,min=0
+    float somma,sommatot,max,min=0;
     printf("Quante ordinazioni devo leggere?");
     scanf("%d",&n);
 
