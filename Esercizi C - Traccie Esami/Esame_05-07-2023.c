@@ -3,20 +3,22 @@
 
 #define DIM 100
 
-float tot_tip(int mat[m][1]){
+float tot_tip(float tip[DIM][DIM], int m){
   float sommaMance;
+  int h=1;
   for(int contatore=0; contatore<m; contatore++) {
-    sommaMance+=mat[contatore][1];
+    sommaMance+=tip[contatore][h];
   } 
 
   return sommaMance;
 }
 
 int main () {
-    int i,n,m,nc,id;
+    int i,n,m=0,nc,id;
     float sommaTotaleMance = 0;
     float cons;
     float somma,sommatot,max,min=0;
+
     printf("Quante ordinazioni devo leggere?");
     scanf("%d",&n);
 
@@ -42,9 +44,9 @@ int main () {
 
 // Primo punto dell'esercizio
       if(n>3 && cons > 50.00){
-        mat[k][0]=id;
-        mat[k][1]=(somma*100)/5; // questo è il contenitore delle mance
-        mat[k][2]=min;
+        tip[k][0]=id;
+        tip[k][1]=(somma*100)/5; // questo è il contenitore delle mance
+        tip[k][2]=min;
         k++;
         //devo tenere conto delle iterazioni che ho con la matrice per il punto 3
         m++;
@@ -56,6 +58,7 @@ int main () {
 
     }
   printf("Il totale dell'incasso del ristorante & %f",sommatot);
-  sommaTotaleMance += tot_tip(mat[m][1]);
+  
+ sommaTotaleMance=tot_tip(tip, m);
 
 }
